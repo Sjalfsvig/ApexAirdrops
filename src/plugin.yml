@@ -1,0 +1,9 @@
+name: ApexAirdrops
+version: 1.0.0
+description: Crates from the air.
+author: Sjalfsvig
+main: me.sunrise39.apexairdrops.ApexAirdrops
+commands:
+  apexairdrops:
+    description: Main command for ApexAirdrops.
+    aliases: [ad, airdrops, drop, airdrop]
