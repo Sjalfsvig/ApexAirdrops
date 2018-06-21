@@ -1,0 +1,60 @@
+#############################################
+# Configuration File for ApexAirdrops 1.0.0 #
+#############################################
+# Airdrop items stored in loot.yml #
+# Current Airdrops stored in airdrops.yml #
+ApexAirdrops:
+
+# General Settings #
+  general:
+    # The prefix in messages. #
+    prefix: '&8[&fApex&bAirdrops&8]'
+    # The message to be sent when an airdrop drops. #
+    # Use %prefix% for the prefix above. %locationX% for the X location and %locationZ% for the Z location. #
+    announcement: '%prefix% &eAn airdrop was spotted near &6%locationX%&e, &6%locationZ%&e.'
+    # Should the announcement be sent to players in every world? #
+    broadcast-everywhere: true
+    # The text to be used as the title of the GUI. #
+    inventory-title: '&4Airdrop'
+    # The text of the hologram shown when the drop is falling and on top of the landed drop. #
+    hologram-text: '&4Airdrop'
+    # If using multiple worlds, should airdrops drop in a random world? Setting to false enables airdrops per world. #
+    # Setting to true will use the first world's settings. #
+    random-world: false
+    # Should drops be destroyed after they have been closed? #
+    destroy-on-close: true
+    # Should items be automatically placed in the players inventory after the drop has been closed? #
+    give-items-on-close: false
+    # Should items be dropped when the drop has been closed/destroyed? #
+    drop-items-on-close: false
+    
+# Flare Settings - Flares allow players to summon airdrops #
+  flare:
+    # The display name of the flare item #
+    item-name: '&fAirdrop &cFlare'
+    item-lore:
+    - '&eRight-click to summon an airdrop'
+      
+# World Settings - The worlds for airdrops to spawn in #
+  worlds:
+  # The name of the world #
+    survival-world:
+      # How long between airdrops, in minutes. #
+      interval: 10
+      # How long (after a drop lands) until it should be removed, in minutes? Set to 0 to keep the airdrop on the ground #
+      remove-after: 5
+      # The block to be used as the airdrop. #
+      # Use https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html for material names.#
+      block: CHEST:0
+      # Where can the airdrop land? #
+      bounds:
+        # The maximum x coordinate that the airdrop can spawn in. #
+        max-bound-x: 20000
+        # The minimum x coordinate that the airdrop can spawn in. #
+        min-bound-x: 20000
+        # The maximum z coordinate that the airdrop can spawn in. #
+        max-bound-z: 20000
+        # The maximum z coordinate that the airdrop can spawn in. #
+        min-bound-z: 20000
+        # The maximum distance between the announced coordinates and the actual drop. #
+        max-offset: 50
